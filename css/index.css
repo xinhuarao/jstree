@@ -1,0 +1,11 @@
+ul,li{list-style: none;padding:0;margin: 0}
+a{text-decoration: none;color:#000;}
+.tree-node{padding-left: 20px;display: block;vertical-align: middle;}
+.f-dn{display: none}
+.f-icon{font-size: 0;display: none;vertical-align: middle;}
+
+.add-icon{display: inline-block;width: 10px;height: 10px;background-image: url(../images/icon-add.png);background-size: 10px 10px;background-repeat: no-repeat;}
+.del-icon{display: inline-block;width: 10px;height: 10px;background-image: url(../images/icon-minus.png);background-size: 10px 10px;background-repeat: no-repeat;}
+.f-active{background-color: #ccc;}
+#search{width: 250px;}
+

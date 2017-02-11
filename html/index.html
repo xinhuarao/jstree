@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jsTree</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body> 
+	<input type="text" placeholder="输入id搜索子节点,-后面的数字是节点id" id="search">
+	<div id="demo"></div>
+	<script type="text/javascript" src="../javascript/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="../javascript/jsTree.js"></script>
+
+	<script type="text/javascript">
+		
+	$(document).jsTree({parent: document.getElementById('demo')});
+	
+
+	$('#search').on('change', function() {
+		var val = $(this).val();
+		$.fn.jsTree.findNode(val);
+	})
+
+	</script>
+</body>
+</html>
