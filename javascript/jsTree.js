@@ -52,7 +52,8 @@
 			//新增删除子节点事件
 			$(document.body).on('click.jstree', '.add-icon, .del-icon', function(event) {
 				if ($(this).hasClass('add-icon')) {
-					$(this).closest('.tree-node').eq(0).append(Main.generateSubNode({id: Date.now(), name: '新增节点-'})).end().addClass('super');
+					$(this).closest('.tree-node').eq(0).find('ul').removeClass('f-dn').end().append(Main.generateSubNode({id: Date.now(), name: '新增节点-'})).end().addClass('super');
+
 				}else if ($(this).hasClass('del-icon')) {
 					var $parent = $(this).closest('.tree-node').parents('.tree-node').eq(0);
 					$(this).closest('.tree-node').remove();
