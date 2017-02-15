@@ -112,6 +112,9 @@
 				$treenode.siblings().removeClass('f-dn').end().removeClass('f-dn');
 				$treenode = $treenode.parents('.tree').eq(0);
 			}
+			if ($curnode.length == 0) {
+				alert('无此节点！');
+			}
 		}
 	};
 	//定义插件
