@@ -15,12 +15,16 @@
 		
 	$(document).jsTree({parent: document.getElementById('demo')});
 	
-
 	$('#search').on('change', function() {
 		var val = $(this).val();
-		$.fn.jsTree.findNode(val);
-	})
-
+		$(document).jsTree('findNode', val);
+	}).on('keydown', function(event) {
+		var code = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;;
+		if (code == 13) {
+			var val = $(this).val();
+			$(document).jsTree('findNode', val);
+		}
+	});
 	</script>
 </body>
 </html>
